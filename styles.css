@@ -403,6 +403,12 @@ body.bg-shift .bg--alt { opacity: 1; }
 @media (max-width: 560px) {
   body { font-size: 16px; }
   .glassnav { top: 14px; padding: 0 14px; justify-content: center; }
+  .glassnav::before {
+    content: ""; position: absolute; left: 0; right: 0; top: -14px; height: 78px;
+    -webkit-backdrop-filter: blur(26px) saturate(1.1); backdrop-filter: blur(26px) saturate(1.1);
+    -webkit-mask-image: linear-gradient(180deg, #000 62%, transparent); mask-image: linear-gradient(180deg, #000 62%, transparent);
+    pointer-events: none;
+  }
   .brand-pill { font-size: 1.06rem; padding: 9px 20px; }
   .wl-pill { display: none; }
   .headline { font-size: clamp(2.7rem, 13vw, 3.5rem); line-height: 1.03; }

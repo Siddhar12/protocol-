@@ -248,7 +248,7 @@
       /* responsive framing: full figure on desktop, chest-up bust on phones */
       var mob = window.innerWidth <= 900;
       var proj = mPersp(mob ? 0.64 : 0.6, W / H, 0.1, 20);
-      var view = mTrans(0, mob ? -0.34 : 0.0, mob ? -2.05 : -3.0);
+      var view = mTrans(0, mob ? -0.5 : 0.0, mob ? -2.05 : -3.0);
       var sc = [breathe, 0, 0, 0, 0, 1, 0, 0, 0, 0, breathe, 0, 0, 0, 0, 1];
       var model = mMul(mMul(mRotY(rot), mRotX(tilt * 0.32)), sc);
       var mvp = mMul(proj, mMul(view, model));
